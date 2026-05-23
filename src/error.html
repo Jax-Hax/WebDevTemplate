@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>You're Offline</title>
+	</head>
+
+	<body class="flex min-h-screen items-center justify-center bg-base-200 p-6">
+		<div class="card w-full max-w-md border border-base-300 bg-base-100 shadow-2xl">
+			<div class="card-body items-center text-center">
+				<div class="placeholder avatar mb-2">
+					<div class="w-20 rounded-full bg-warning text-warning-content">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="h-10 w-10"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M18.364 5.636a9 9 0 010 12.728m-2.121-2.122a6 6 0 000-8.485m-2.122 2.121a3 3 0 010 4.243m-7.778 3.536L3 21m0 0l3.536-3.536M3 21h5"
+							/>
+						</svg>
+					</div>
+				</div>
+
+				<h1 class="text-3xl font-bold">You're offline</h1>
+
+				<p class="text-base-content/70">
+					This app requires an internet connection to work. Check your network and try again.
+				</p>
+
+				<div class="mt-4 card-actions w-full">
+					<button class="btn w-full btn-primary" onclick="window.location.reload()">
+						Try Again
+					</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
