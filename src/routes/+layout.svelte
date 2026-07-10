@@ -2,7 +2,6 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import { invalidate } from '$app/navigation';
-	//import { pwaInfo } from 'virtual:sveltekit-pwa-info';
 	import { onMount } from 'svelte';
 
 	let { data, children } = $props();
@@ -17,7 +16,6 @@
 
 		return () => data.subscription.unsubscribe();
 	});
-	//let webManifestLink = $derived(pwaInfo ? pwaInfo.webManifest.linkTag : '');
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>

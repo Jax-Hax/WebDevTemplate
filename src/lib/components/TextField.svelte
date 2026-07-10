@@ -16,16 +16,17 @@
 	const { value, errors, constraints } = $derived(formFieldProxy(superform, field));
 </script>
 
-<fieldset class="fieldset">
-	<legend class="fieldset-legend text-base">{field}</legend>
-	<input
-		name={field}
-		type="text"
-		class="input {$errors ? 'input-error' : ''}"
-		aria-invalid={$errors ? 'true' : undefined}
-		bind:value={$value}
-		{...$constraints}
-		{...rest}
-	/>
-	{#if $errors}<p class="text-error">{$errors}</p>{/if}
-</fieldset>
+<div class="fieldset">
+<label class="fieldset-legend text-base">
+  {field}<br />
+  <input
+    name={field}
+    type="text"
+    class="input {$errors ? 'input-error' : ''}"
+    aria-invalid={$errors ? 'true' : undefined}
+    bind:value={$value}
+    {...$constraints}
+    {...rest} />
+</label>
+{#if $errors}<span class="text-error">{$errors}</span>{/if}
+</div>
